@@ -3,11 +3,11 @@ This script monitors the health of multiple HTTPS endpoints asynchronously using
 
 ## Requirements:
 Python (>=3.6)
-``` pip install aiohttp pyyaml ```
+```pip install aiohttp pyyaml ```
 
 ## How to Run:
 ``` python monitor.py <config_file_path>```
-``` Cltr+C to terminate```
+```Cltr+C to terminate```
 
 ## Configuration Format:
 Check out ``` sample.yaml```
@@ -15,7 +15,7 @@ Check out ``` sample.yaml```
 ## How it works
 ### a) Logging Setup
 setup_logging(config_file): Creates a logs/ folder and initializes a new log file with a timestamp and the config file name.
-Logs are written to: ``` logs/monitor_<config_name>_<timestamp>.log```
+Logs are written to: ```logs/monitor_<config_name>_<timestamp>.log```
 
 ### b) Loading Config
 load_config(): Parses the YAML file and validates each endpoint (e.g., missing URLs are flagged early).
@@ -46,5 +46,5 @@ load_config(): Parses the YAML file and validates each endpoint (e.g., missing U
 1) Introduced async I/O using aiohttp for faster request handling.
 2) Used asyncio.Semaphore to throttle concurrency and avoid overloading the event loop or target servers.
 3) Used asyncio.gather() to fire off checks concurrently, improving speed without losing control.
-4) Passed time_left to check_health_async to skip checks gracefully near the end of a cycle.
+4) Passed time_left to check_health_async to skip checks near the end of a cycle.
 
