@@ -7,6 +7,7 @@ Python (>=3.6)
 
 ## How to Run:
 ``` python monitor.py <config_file_path>```
+``` Cltr+C to terminate```
 
 ## Configuration Format:
 Check out ``` sample.yaml```
@@ -20,7 +21,7 @@ Logs are written to: ``` logs/monitor_<config_name>_<timestamp>.log```
 load_config(): Parses the YAML file and validates each endpoint (e.g., missing URLs are flagged early).
 
 ### c) Cycle Timing & Concurrency
-- The monitor runs in 15-second cycles.
+- Monitor runs in 15-second cycles(If it processes all endpoints before 15sec it sleeps for the remaining time)
 - A Semaphore is used to control concurrency (max_concurrent=7 by default), which ensures that all endpoints are not hit at once and avoids event loop saturation.
 
 ### d) Endpoint Monitoring
