@@ -1,5 +1,5 @@
 # Endpoint_Monitor
-This script monitors the health of multiple HTTP endpoints asynchronously using Python. It logs response times and availability percentages across monitoring cycles and stores them with detailed logs in a timestamped file.
+This script monitors the health of multiple HTTPS endpoints asynchronously using Python. It logs response times and availability percentages across monitoring cycles and stores them with detailed logs in a timestamped file.
 
 ## Requirements:
 Python (>=3.6)
