@@ -7,6 +7,7 @@ Python (>=3.6)
 
 ## How to Run:
 ``` python monitor_async.py <config_file_path>```
+
 ```Cltr+C to terminate```
 
 ## Configuration Format:
