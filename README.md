@@ -6,7 +6,7 @@ Python (>=3.6)
 ```pip install aiohttp pyyaml ```
 
 ## How to Run:
-``` python monitor.py <config_file_path>```
+``` python monitor_async.py <config_file_path>```
 ```Cltr+C to terminate```
 
 ## Configuration Format:
